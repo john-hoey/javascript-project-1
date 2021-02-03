@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Memory Game</h1>
-      <p class="timer">Timer: 0:00</p>
-      <button class="reset-button">Reset Game</button>
+    <header class="page-header">
+      <ul class="header-list">
+        <li><h1 class="list-h1">Memory Game</h1></li>
+        <li><button class="reset-button">Reset Game</button></li>
+      </ul>
     </header>
-    <main>
+    <p class="timer">Timer: 0:00</p>
+    <main class="page-container">
       <section class="pop-up">
-        <p>
-          Insructions: The player selects a card and turns it over then selects
-          another card. If the two cards are a matching pair, The player is
-          awarded another turn for making a match and goes again.
+        <p class="pop-up-header">INSTRUCTIONS:</p>
+        <p class="pop-up-text">
+          The player selects a card and turns it over then selects another card.
+          If the two cards are a matching pair, The player is awarded another
+          turn for making a match and goes again.
         </p>
         <button class="start-button">Start Game</button>
       </section>
@@ -37,7 +40,7 @@
         <div class="card"></div>
       </section>
     </main>
-    <footer>Made by Us sloppyright2021 C</footer>
+    <footer class="page-footer">Made by Us sloppyright2021 C</footer>
     <script src="script.js"></script>
   </body>
 </html>

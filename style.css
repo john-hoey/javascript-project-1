@@ -1,0 +1,97 @@
+body {
+  /* display: flex; */
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  padding: 5px;
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-list {
+  padding: 0px;
+  display: flex;
+  width: 60vh;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.list-h1 {
+  font-size: x-large;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.reset-button {
+  display: flex;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+  padding: 0;
+  margin: 0;
+}
+.page-container {
+  /*.... */
+}
+
+.pop-up {
+  position: fixed;
+  border: 2px solid white;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 30%;
+  background-color: rgba(255, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 0;
+  /* justify-content: center;
+  align-items: center; */
+  z-index: 1;
+  /* display: none; */
+}
+
+.pop-up-header {
+  font-weight: bolder;
+  font-size: x-large;
+  padding: 0px 0px 5px 0;
+  margin: 5px 0px 0px 0px;
+}
+
+.pop-up-text {
+  margin-top: 10px;
+
+  font-style: italic;
+  font-size: large;
+}
+
+.start-button {
+  margin-top: 10px;
+  font-size: large;
+}
