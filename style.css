@@ -55,15 +55,21 @@ body {
 }
 .page-container {
   /*.... */
+  display: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pop-up {
   position: fixed;
+  /* display: flex; */
   border: 2px solid white;
   border-radius: 10px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   width: 80%;
   height: 30%;
   background-color: rgba(255, 0, 0, 0.6);
@@ -71,10 +77,10 @@ body {
   color: white;
   padding: 0;
   margin: 0;
-  /* justify-content: center;
-  align-items: center; */
+  /* justify-content: center; */
+  /* align-items: center; */
   z-index: 1;
-  /* display: none; */
+  display: none;
 }
 
 .pop-up-header {
@@ -94,4 +100,106 @@ body {
 .start-button {
   margin-top: 10px;
   font-size: large;
+}
+
+.grid {
+  /* width: 369px; */
+  width: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center;  */
+}
+
+.back {
+  /* width: 90px;
+  height: 90px; */
+  width: 10vh;
+  height: 10vh;
+  margin-top: 3vh;
+  background-color: black;
+  /* border: 1px solid white; */
+  background: url(assets/n-spade.png);
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+/* .front {
+  display: none;
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+} */
+/* .back {
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  background-image: url(/assets/n-spade.png);
+  background-color: red;
+} */
+.coin-ten {
+  width: 10vh;
+  height: 10vh;
+  margin-top: 3vh;
+  background-color: black;
+  /* border: 1px solid white; */
+  background: url(assets/coin.png);
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.coin-twenty {
+  width: 10vh;
+  height: 10vh;
+  margin-top: 3vh;
+  background-color: black;
+  /* border: 1px solid white; */
+  background: url(assets/twenty-coin.png);
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.star {
+  width: 10vh;
+  height: 10vh;
+  margin-top: 3vh;
+  background-color: black;
+  /* border: 1px solid white; */
+  background: url(assets/star.png);
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.one-up-chest {
+  width: 10vh;
+  height: 10vh;
+  margin-top: 3vh;
+  background-color: black;
+  /* border: 1px solid white; */
+  background: url(assets/one-up-chest.png);
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.flower {
+  width: 10vh;
+  height: 10vh;
+  margin-top: 3vh;
+  background-color: black;
+  /* border: 1px solid white; */
+  background: url(assets/flower.png);
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.mushroom {
+  width: 10vh;
+  height: 10vh;
+  margin-top: 3vh;
+  background-color: black;
+  /* border: 1px solid white; */
+  background: url(assets/mushroom1.png);
+  background-size: 65% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
