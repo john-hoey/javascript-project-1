@@ -209,10 +209,6 @@ body {
   /* display: none; */
 }
 
-/* 
-.face-down {
-  
-  display: flex !important;
-  background-image: url(/assets/n-spade.png);
- 
-} */
+.black {
+  background-color: black;
+}

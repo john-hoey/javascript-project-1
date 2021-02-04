@@ -8,6 +8,8 @@ let cards = [
   { name: "star", img: "/assets/one-up.png" },
   { name: "twenty-coin", img: "/assets/twenty-coin.png" },
 ];
+
+let flippedCards = [];
 const grid = document.querySelector(".grid");
 // shuffling function using Durstenfeld shuffle
 const shuffleArray = (array) => {
@@ -26,11 +28,11 @@ const shuffleArray = (array) => {
   }
 };
 
+
 const assignDiv = () => {
   shuffleArray(cards);
   let i = 0;
   cards.forEach((card) => {
-    console.log(card.name);
     let cardBox = document.createElement("div");
     cardBox.setAttribute("id", i);
     cardBox.classList.add("card");
@@ -43,3 +45,19 @@ const assignDiv = () => {
 };
 assignDiv();
 assignDiv();
+
+let count = 0;
+let addCardsToFlipped = (flippedCards.length <= 2) => {
+if(count < 0) {
+  count++;
+  flippedCards.push()
+};
+// shouldn't be able to click more than two cards at a time
+let cardClassFlower = document.querySelector("");
+
+const flipLogic = () => {
+  if (cards[i].name === cards[i].name) {
+    cardBox.classList.remove(cards[i].name)
+    cardBox.classList.add(".black");
+  }
+};
