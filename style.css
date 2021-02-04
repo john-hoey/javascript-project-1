@@ -144,18 +144,6 @@ body {
   background-position: 50% 50%;
   /* display: none; */
 }
-.coin-ten2 {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/coin.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
 .twenty-coin {
   width: 10vh;
   height: 10vh;
@@ -168,18 +156,7 @@ body {
   background-position: 50% 50%;
   /* display: none; */
 }
-.twenty-coin2 {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/twenty-coin.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+
 .star {
   width: 10vh;
   height: 10vh;
@@ -192,18 +169,7 @@ body {
   background-position: 50% 50%;
   /* display: none; */
 }
-.star2 {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/star.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+
 .one-up-chest {
   width: 10vh;
   height: 10vh;
@@ -216,18 +182,7 @@ body {
   background-position: 50% 50%;
   /* display: none; */
 }
-.one-up-chest2 {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/one-up-chest.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+
 .flower {
   width: 10vh;
   height: 10vh;
@@ -240,18 +195,7 @@ body {
   background-position: 50% 50%;
   /* display: none; */
 }
-.flower2 {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/flower.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+
 .mushroom {
   width: 10vh;
   height: 10vh;
@@ -264,18 +208,7 @@ body {
   background-position: 50% 50%;
   /* display: none; */
 }
-.mushroom2 {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/mushroom1.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+
 /* 
 .face-down {
   
