@@ -7,6 +7,12 @@ let cards = [
   { name: "one-up-chest", img: "/assets/one-up.png" },
   { name: "star", img: "/assets/one-up.png" },
   { name: "twenty-coin", img: "/assets/twenty-coin.png" },
+  { name: "coin-ten", img: "/assets/coin.png" },
+  { name: "flower", img: "/assets/flower.png" },
+  { name: "mushroom", img: "/assets/mushroom.png" },
+  { name: "one-up-chest", img: "/assets/one-up.png" },
+  { name: "star", img: "/assets/one-up.png" },
+  { name: "twenty-coin", img: "/assets/twenty-coin.png" },
 ];
 
 let flippedCards = [];
@@ -27,7 +33,37 @@ const shuffleArray = (array) => {
     }
   }
 };
-
+let matchCards = [];
+// Cards are deleting when double clicked
+const cardToggle = (e) => {
+  let clickedCard = document.getElementById(e.target.id);
+  e.target.classList.toggle(cards[e.target.id].name);
+  if (flippedCards.length < 2) {
+    flippedCards.push(clickedCard);
+  } else {
+    // Match logic
+    // If the classes of the first object in the flip card array is equal to the classes of the second object then we push those into matched cards AND their div id is not equal then we will execute our match. Other wise flip cards back.
+    if (
+      flippedCards[0].classList[flippedCards[0].classList] ===
+      flippedCards[1].classList[flippedCards[1].classList]
+    ) {
+      matchCards.push(flippedCards[0]);
+      matchCards.push(flippedCards[1]);
+    }
+    console.log(matchCards);
+    // Grabs last class of class list and toggles it. length is always one higher than index, which is why we subtracted one
+    flippedCards[0].classList.toggle(
+      flippedCards[0].classList[flippedCards[0].classList.length - 1]
+    );
+    flippedCards[1].classList.toggle(
+      flippedCards[1].classList[flippedCards[1].classList.length - 1]
+    );
+    flippedCards = [];
+    // e.target.classList.toggle(cards[e.target.id].name);
+    flippedCards.push(clickedCard);
+    // e.target.classList.toggle(cards[e.target.id].name);
+  }
+};
 
 const assignDiv = () => {
   shuffleArray(cards);
@@ -36,28 +72,22 @@ const assignDiv = () => {
     let cardBox = document.createElement("div");
     cardBox.setAttribute("id", i);
     cardBox.classList.add("card");
-    cardBox.addEventListener("click", (e) => {
-      e.target.classList.toggle(cards[e.target.id].name);
-    });
+    cardBox.addEventListener("click", cardToggle);
     grid.appendChild(cardBox);
     i++;
   });
 };
 assignDiv();
-assignDiv();
+// assignDiv();
 
-let count = 0;
-let addCardsToFlipped = (flippedCards.length <= 2) => {
-if(count < 0) {
-  count++;
-  flippedCards.push()
-};
+console.log(flippedCards);
+
 // shouldn't be able to click more than two cards at a time
-let cardClassFlower = document.querySelector("");
+// let cardClassFlower = document.querySelector("");
 
 const flipLogic = () => {
   if (cards[i].name === cards[i].name) {
-    cardBox.classList.remove(cards[i].name)
+    cardBox.classList.remove(cards[i].name);
     cardBox.classList.add(".black");
   }
 };
