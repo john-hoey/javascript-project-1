@@ -7,12 +7,6 @@ let cards = [
   { name: "one-up-chest", img: "/assets/one-up.png" },
   { name: "star", img: "/assets/one-up.png" },
   { name: "twenty-coin", img: "/assets/twenty-coin.png" },
-  { name: "coin-ten2", img: "/assets/coin.png" },
-  { name: "flower2", img: "/assets/flower.png" },
-  { name: "mushroom2", img: "/assets/mushroom.png" },
-  { name: "one-up-chest2", img: "/assets/one-up.png" },
-  { name: "star2", img: "/assets/one-up.png" },
-  { name: "twenty-coin2", img: "/assets/twenty-coin.png" },
 ];
 const grid = document.querySelector(".grid");
 // shuffling function using Durstenfeld shuffle
@@ -40,8 +34,6 @@ const assignDiv = () => {
     let cardBox = document.createElement("div");
     cardBox.setAttribute("id", i);
     cardBox.classList.add("card");
-    // cardBox.classList.add(card.name);
-    cardBox.classList.add("face-down");
     cardBox.addEventListener("click", (e) => {
       e.target.classList.toggle(cards[e.target.id].name);
     });
@@ -50,17 +42,4 @@ const assignDiv = () => {
   });
 };
 assignDiv();
-// let cardListener = document.getElementById();
-// cardListener.addEventListener("click", (e) => {
-//   e.target.classList.toggle(cards[e.target.id].name);
-// });
-// const flipCard = () => {
-//   cards.forEach((card) => {
-//     cardBox.classList.toggle("face-down");
-//     cardBox.classList.toggle("face-up");
-//     document.cardBox.style.backgroundImage.toggle = url(card.img);
-//   });
-// };
-// assignDiv();
-// let div2 = document.getElementsByClassName("card");
-// div2.addEventListener("click", flipCard);
+assignDiv();
