@@ -33,7 +33,9 @@ const shuffleArray = (array) => {
     }
   }
 };
+
 let matchCards = [];
+
 // Cards are deleting when double clicked
 const cardToggle = (e) => {
   let clickedCard = document.getElementById(e.target.id);
@@ -41,7 +43,8 @@ const cardToggle = (e) => {
   if (flippedCards.length < 2) {
     flippedCards.push(clickedCard);
   } else {
-    // Match logic
+    //------------------------------------------------------------------
+    // (NOT CURRENTLY) Match logic----------~~~~~~----vvvvvvv-----~~~~~~---------vvvvvvv-------
     // If the classes of the first object in the flip card array is equal to the classes of the second object then we push those into matched cards AND their div id is not equal then we will execute our match. Other wise flip cards back.
     if (
       flippedCards[0].classList[flippedCards[0].classList] ===
@@ -50,7 +53,13 @@ const cardToggle = (e) => {
       matchCards.push(flippedCards[0]);
       matchCards.push(flippedCards[1]);
     }
-    console.log(matchCards);
+
+    // if (matchCards[i].name === matchCards[i].name) {
+    //   cardBox.classList.remove(cards[i].name);
+    //   cardBox.classList.add(".black");
+    // }
+    // console.log(flippedCards);
+    matchLogic1();
     // Grabs last class of class list and toggles it. length is always one higher than index, which is why we subtracted one
     flippedCards[0].classList.toggle(
       flippedCards[0].classList[flippedCards[0].classList.length - 1]
@@ -64,7 +73,7 @@ const cardToggle = (e) => {
     // e.target.classList.toggle(cards[e.target.id].name);
   }
 };
-
+// let cardBox = document.createElement("div");
 const assignDiv = () => {
   shuffleArray(cards);
   let i = 0;
@@ -82,12 +91,55 @@ assignDiv();
 
 console.log(flippedCards);
 
+let cardBox = document.createElement("div");
+//----------------------------------------------------------------
+// spencer's match function
+//----------------------------------------------------------------
+// let matchLogic = () => {
+//   if (
+//     flippedCards[0].classList[flippedCards[0].classList] ===
+//     flippedCards[1].classList[flippedCards[1].classList]
+//   ) {
+//     matchCards.push(flippedCards[0]);
+//     matchCards.push(flippedCards[1]);
+//   }
+//   if (matchCards[0].name === matchCards[1].name) {
+//     cardBox.classList.remove(matchCards[0].name);
+//     cardBox.classList.remove(matchCards[1].name);
+//     cardBox.classList.add(".black");
+//   } else {
+//   }
+// };
+// console.log(matchCards);
+
+//----------------------------------------------------------------
 // shouldn't be able to click more than two cards at a time
 // let cardClassFlower = document.querySelector("");
 
-const flipLogic = () => {
-  if (cards[i].name === cards[i].name) {
-    cardBox.classList.remove(cards[i].name);
-    cardBox.classList.add(".black");
+// how do you see what you clicked? you can see what was clicked by e.target
+// did I click on a card? if I did. is it my first or second?
+
+// if ( matchCards.length === 2) {
+//   if (flippedCards[0]===flippedCards[1]){
+
+//   }
+// }
+
+//bubble with delegation
+//if and only if I click on the card and itss face down and my array iss less than the array.length 2 then it will add card to array. it wont otherwise
+
+//flipped array will be an array of flipped cards
+let matchLogic1 = () => {
+  if (
+    matchCards[0].class === matchCards[1].class &&
+    matchCards[0].id !== matchCards[1].id
+  ) {
+    matchCards[0].style.display = "black";
+    matchCards[1].style.display = "black";
+  } else {
+    matchCards[0].style.display = "card";
+    matchCards[1].style.display = "card";
   }
 };
+console.log(matchCards);
+// stickyGrid();
