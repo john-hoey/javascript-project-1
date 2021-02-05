@@ -118,9 +118,10 @@ body {
   height: 90px;
   margin: 5px;
 } */
+
 .card {
-  /* width: 90px;
-  height: 90px; */
+  width: 90px;
+  height: 90px;
   width: 10vh;
   height: 10vh;
   margin-top: 3vh;
@@ -130,85 +131,85 @@ body {
   background-size: 65% 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  /* display: flex; */
+  display: flex;
 }
 
-.coin-ten {
+/* .coin-ten {
   width: 10vh;
   height: 10vh;
   margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/coin.png);
+  background-color: black; */
+/* border: 1px solid white; */
+/* background: url(assets/coin.png);
   background-size: 65% 100%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
-.twenty-coin {
+  background-position: 50% 50%; */
+/* display: none; */
+/* } */
+/* .twenty-coin {
   width: 10vh;
   height: 10vh;
   margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/twenty-coin.png);
+  background-color: black; */
+/* border: 1px solid white; */
+/* background: url(assets/twenty-coin.png);
   background-size: 65% 100%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+  background-position: 50% 50%; */
+/* display: none; */
+/* } */
 
-.star {
+/* .star {
   width: 10vh;
   height: 10vh;
   margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/star.png);
+  background-color: black; */
+/* border: 1px solid white; */
+/* background: url(assets/star.png);
   background-size: 65% 100%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+  background-position: 50% 50%; */
+/* display: none; */
+/* } */
 
-.one-up-chest {
+/* .one-up-chest {
   width: 10vh;
   height: 10vh;
   margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/one-up-chest.png);
+  background-color: black; */
+/* border: 1px solid white; */
+/* background: url(assets/one-up-chest.png);
   background-size: 65% 100%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+  background-position: 50% 50%; */
+/* display: none; */
+/* } */
 
-.flower {
+/* .flower {
   width: 10vh;
   height: 10vh;
   margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/flower.png);
+  background-color: black; */
+/* border: 1px solid white; */
+/* background: url(assets/flower.png);
   background-size: 65% 100%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+  background-position: 50% 50%; */
+/* display: none; */
+/* } */
 
-.mushroom {
+/* .mushroom {
   width: 10vh;
   height: 10vh;
   margin-top: 3vh;
-  background-color: black;
-  /* border: 1px solid white; */
-  background: url(assets/mushroom1.png);
+  background-color: black; */
+/* border: 1px solid white; */
+/* background: url(assets/mushroom1.png);
   background-size: 65% 100%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* display: none; */
-}
+  background-position: 50% 50%; */
+/* display: none; */
+/* } */
 
 .black {
   background-color: black;
