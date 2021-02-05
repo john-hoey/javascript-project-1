@@ -42,11 +42,12 @@ const matchGame = () => {
     flippedCards.push(cards[cardId].name);
     obnoxiouslyObviousNowThatYouThinkAboutItID.push(cardId);
     e.target.setAttribute("src", cards[cardId].img);
-    grid.style.pointerEvents = "none";
+    // grid.style.pointerEvents = "none";
     if (flippedCards.length === 2) {
       // setTimeout(matchLogic, 500);
     }
   };
+  // console.log(cardFlip);
 
   const buildGrid = () => {
     shuffleArray(cards);
@@ -106,18 +107,18 @@ const matchGame = () => {
   //if and only if I click on the card and itss face down and my array iss less than the array.length 2 then it will add card to array. it wont otherwise
 
   //flipped array will be an array of flipped cards
-  let matchLogic1 = () => {
-    if (
-      matchCards[0].class === matchCards[1].class &&
-      matchCards[0].id !== matchCards[1].id
-    ) {
-      matchCards[0].style.display = `black`;
-      matchCards[1].style.display = `black`;
-    } else {
-      matchCards[0].style.display = `card`;
-      matchCards[1].style.display = `card`;
-    }
-  };
+  // let matchLogic1 = () => {
+  //   if (
+  //     matchCards[0].class === matchCards[1].class &&
+  //     matchCards[0].id !== matchCards[1].id
+  //   ) {
+  //     matchCards[0].style.display = `black`;
+  //     matchCards[1].style.display = `black`;
+  //   } else {
+  //     matchCards[0].style.display = `card`;
+  //     matchCards[1].style.display = `card`;
+  //   }
+  // };
 
   let timer = document.querySelector(`.timer`);
 
