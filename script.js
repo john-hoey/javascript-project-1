@@ -14,7 +14,7 @@ let cards = [
   { name: "star", img: "/assets/one-up.png" },
   { name: "twenty-coin", img: "/assets/twenty-coin.png" },
 ];
-
+let obnoxiouslyObviousNowThatYouThinkAboutIt = [];
 let flippedCards = [];
 const grid = document.querySelector(".grid");
 // shuffling function using Durstenfeld shuffle
