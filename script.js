@@ -33,6 +33,7 @@ const shuffleArray = (array) => {
     }
   }
 };
+
 let matchCards = [];
 // Cards are deleting when double clicked
 const cardToggle = (e) => {
@@ -91,3 +92,49 @@ const flipLogic = () => {
     cardBox.classList.add(".black");
   }
 };
+
+let timer = document.querySelector(".timer");
+
+let minutesLabel = document.getElementById("minutes");
+let secondsLabel = document.getElementById("seconds");
+let totalSeconds = 0;
+
+const timerStart = () => {
+  const setTime = () => {
+    ++totalSeconds;
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+  };
+  setInterval(setTime, 1000);
+  let pad = (val) => {
+    let valString = val + "";
+    if (valString.length < 2) {
+      return "0" + valString;
+    } else {
+      return valString;
+    }
+  };
+};
+
+let resetButton = document.querySelector(".reset-button");
+
+// RESET TIMER
+resetButton.addEventListener("clicked", () => {
+  seconds = 0;
+  minutes = 0;
+  hour = 0;
+  timer.innerHTML = "0:00";
+  clearInterval(interval);
+});
+
+let startGame = document.querySelector(".start-button");
+let popUp = document.querySelector(".pop-up");
+let start = () => {
+  startGame.addEventListener("click", () => {
+    timerStart();
+    popUp.style.display = "none";
+    grid.style.pointerEvents = "auto";
+  });
+};
+
+start();
