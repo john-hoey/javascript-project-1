@@ -49,6 +49,8 @@ console.log(cards);
 const buildGrid = () => {
   shuffleArray(cards);
   let i = 0;
+  // grid.removeChild(cardBox);
+  grid.innerHTML = "";
   cards.forEach((card) => {
     let cardBox = document.createElement("img");
     // let cardIMG = document.createElement("img");
@@ -153,13 +155,21 @@ const timerStart = () => {
 // // RESET TIMER
 let resetButton = document.querySelector(".reset-button");
 resetButton.addEventListener(`click`, () => {
-  seconds = 0;
-  minutes = 0;
-  hour = 0;
-  timer.innerHTML = "0:00";
-  //clearInterval(interval);
-  popUp.style.display = "none";
-  cardBox.style.background = assets / n - spade.png;
+  totalSeconds = 0;
+
+  // let minutesLabel = document.getElementById("minutes");
+  // let secondsLabel = document.getElementById("seconds");
+  // minutesLabel = 0;
+  // secondsLabel = 0;
+  // seconds = 0;
+  // minutes = 0;
+  // hour = 0;
+  // timer.innerHTML = "0:00";
+  // clearInterval(interval);
+  // popUp.style.display = "none";
+  // cardBox.style.background = assets / n - spade.png;
+  // grid.innerHTML = "";
+  buildGrid();
 });
 
 // PROBABLY OLD SSTUFF (reset)
