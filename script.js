@@ -1,16 +1,30 @@
 "use strict";
+// let cards = [
+//   { name: `coin-ten`, img: `/assets/coin.png` },
+//   { name: `flower`, img: `/assets/flower.png` },
+//   { name: `mushroom`, img: `/assets/mushroom.png` },
+//   { name: `one-up-chest`, img: `/assets/one-up.png` },
+//   { name: `star`, img: `/assets/one-up.png` },
+//   { name: `twenty-coin`, img: `/assets/twenty-coin.png` },
+//   { name: `coin-ten`, img: `/assets/coin.png` },
+//   { name: `flower`, img: `/assets/flower.png` },
+//   { name: `mushroom`, img: `/assets/mushroom.png` },
+//   { name: `one-up-chest`, img: `/assets/one-up.png` },
+//   { name: `star`, img: `/assets/one-up.png` },
+//   { name: `twenty-coin`, img: `/assets/twenty-coin.png` },
+// ];
 let cards = [
   { name: `coin-ten`, img: `/assets/coin.png` },
   { name: `flower`, img: `/assets/flower.png` },
-  { name: `mushroom`, img: `/assets/mushroom.png` },
-  { name: `one-up-chest`, img: `/assets/one-up.png` },
-  { name: `star`, img: `/assets/one-up.png` },
+  { name: `mushroom`, img: `/assets/mushroom1.png` },
+  { name: `one-up-chest`, img: `/assets/one-up-chest.png` },
+  { name: `star`, img: `/assets/star.png` },
   { name: `twenty-coin`, img: `/assets/twenty-coin.png` },
   { name: `coin-ten`, img: `/assets/coin.png` },
   { name: `flower`, img: `/assets/flower.png` },
-  { name: `mushroom`, img: `/assets/mushroom.png` },
-  { name: `one-up-chest`, img: `/assets/one-up.png` },
-  { name: `star`, img: `/assets/one-up.png` },
+  { name: `mushroom`, img: `/assets/mushroom1.png` },
+  { name: `one-up-chest`, img: `/assets/one-up-chest.png` },
+  { name: `star`, img: `/assets/star.png` },
   { name: `twenty-coin`, img: `/assets/twenty-coin.png` },
 ];
 // EMPTY ARRAYS FOR MODIFICATIONS
@@ -36,10 +50,12 @@ const buildGrid = () => {
   shuffleArray(cards);
   let i = 0;
   cards.forEach((card) => {
-    let cardBox = document.createElement(`img`);
+    let cardBox = document.createElement("img");
+    // let cardIMG = document.createElement("img");
     cardBox.setAttribute(`data-id`, i);
     cardBox.classList.add(`card`);
     cardBox.addEventListener("click", cardFlip);
+    // cardBox.appendChild(cardIMG);
     grid.appendChild(cardBox);
     i++;
   });
@@ -48,35 +64,50 @@ const buildGrid = () => {
 //bubble with delegation
 //if and only if I click on the card and itss face down and my flipped array is less than the array.length 2 then it will add card to array. it wont otherwise
 
+//
 const cardFlip = (e) => {
-  let cardId = e.target.getAttribute(`data-id`);
-  if (e.target.className === "card" && flippedCards.length < 2) {
-    flippedCards.push(e.target.cards[cardId].img);
-  }
-  //check length of flipped cards
-  if (flippedCards.length === 1) {
-    //e.target stop flip
-    //if/else (match or doesn't)
-    //matching function
-    //      if matching push to match array
-    if (
-      flippedCards[0].img === flippedCards[1].img &&
-      flippedCards[0].cardId !== flippedCards[1].cardId
-    ) {
-      matchCards.push(flippedCards);
-      flippedCards = [];
-      matchCards.classList.add("black");
-    } else {
-      setTimeout(() => {});
-      flip;
-    }
-    //unmatching function
-    //clear flipped cards array
-    flippedCards = [];
+  let cardId = e.target.getAttribute("data-id");
+  flippedCards.push(cards[cardId].name);
+  cardData.push(cardId);
+  // change src to css
+  e.target.setAttribute("src", cards[cardId].img);
+  // grid.style.pointerEvents = "none";
+  if (flippedCards.length === 2) {
+    // setTimeout(matchLogic, 500);
   }
 };
+// console.log(cardFlip);
+console.log(flippedCards);
 buildGrid();
 
+// const cardFlip = (e) => {
+//   let cardId = e.target.getAttribute(`data-id`);
+//   if (e.target.className === "card" && flippedCards.length < 2) {
+//     flippedCards.push(e.target.cards[cardId].img);
+//   }
+//   //check length of flipped cards
+//   if (flippedCards.length === 1) {
+//     //e.target stop flip
+//     //if/else (match or doesn't)
+//     //matching function
+//     //      if matching push to match array
+//     if (
+//       flippedCards[0].img === flippedCards[1].img &&
+//       flippedCards[0].cardId !== flippedCards[1].cardId
+//     ) {
+//       matchCards.push(flippedCards);
+//       flippedCards = [];
+//       matchCards.classList.add("black");
+//     } else {
+//       setTimeout(() => {});
+//       flip;
+//     }
+//     //unmatching function
+//     //clear flipped cards array
+//     flippedCards = [];
+//   }
+// };
+// buildGrid();
 // cardBox.addEventListener("click", cardFlip);
 
 //-------------------------------------------------------------------------------------------------------------------
@@ -120,6 +151,7 @@ const timerStart = () => {
 };
 
 // // RESET TIMER
+let resetButton = document.querySelector(".reset-button");
 resetButton.addEventListener(`click`, () => {
   seconds = 0;
   minutes = 0;
@@ -127,10 +159,8 @@ resetButton.addEventListener(`click`, () => {
   timer.innerHTML = "0:00";
   //clearInterval(interval);
   popUp.style.display = "none";
-  cardBox.style.background = assets/n-spade.png;
-};
-
-
+  cardBox.style.background = assets / n - spade.png;
+});
 
 // PROBABLY OLD SSTUFF (reset)
 // resetButton.addEventListener("clicked", () => {
@@ -140,8 +170,6 @@ resetButton.addEventListener(`click`, () => {
 //   timer.innerHTML = "0:00";
 //   clearInterval(interval);
 // });
-
-
 
 //START GAME FUNCTION
 
