@@ -1,17 +1,17 @@
 "use strict";
 let cards = [
-  { name: "coin-ten", img: "/assets/coin.png" },
-  { name: "flower", img: "/assets/flower.png" },
-  { name: "mushroom", img: "/assets/mushroom.png" },
-  { name: "one-up-chest", img: "/assets/one-up.png" },
-  { name: "star", img: "/assets/one-up.png" },
-  { name: "twenty-coin", img: "/assets/twenty-coin.png" },
-  { name: "coin-ten", img: "/assets/coin.png" },
-  { name: "flower", img: "/assets/flower.png" },
-  { name: "mushroom", img: "/assets/mushroom.png" },
-  { name: "one-up-chest", img: "/assets/one-up.png" },
-  { name: "star", img: "/assets/one-up.png" },
-  { name: "twenty-coin", img: "/assets/twenty-coin.png" },
+  { name: `coin-ten`, img: `/assets/coin.png` },
+  { name: `flower`, img: `/assets/flower.png` },
+  { name: `mushroom`, img: `/assets/mushroom.png` },
+  { name: `one-up-chest`, img: `/assets/one-up.png` },
+  { name: `star`, img: `/assets/one-up.png` },
+  { name: `twenty-coin`, img: `/assets/twenty-coin.png` },
+  { name: `coin-ten`, img: `/assets/coin.png` },
+  { name: `flower`, img: `/assets/flower.png` },
+  { name: `mushroom`, img: `/assets/mushroom.png` },
+  { name: `one-up-chest`, img: `/assets/one-up.png` },
+  { name: `star`, img: `/assets/one-up.png` },
+  { name: `twenty-coin`, img: `/assets/twenty-coin.png` },
 ];
 // EMPTY ARRAYS FOR MODIFICATIONS
 let cardData = [];
@@ -120,6 +120,19 @@ const timerStart = () => {
 };
 
 // // RESET TIMER
+resetButton.addEventListener(`click`, () => {
+  seconds = 0;
+  minutes = 0;
+  hour = 0;
+  timer.innerHTML = "0:00";
+  //clearInterval(interval);
+  popUp.style.display = "none";
+  cardBox.style.background = assets/n-spade.png;
+};
+
+
+
+// PROBABLY OLD SSTUFF (reset)
 // resetButton.addEventListener("clicked", () => {
 //   seconds = 0;
 //   minutes = 0;
@@ -128,17 +141,7 @@ const timerStart = () => {
 //   clearInterval(interval);
 // });
 
-// let startGame = document.querySelector(".start-button");
-// let popUp = document.querySelector(".pop-up");
-// let start = () => {
-//   startGame.addEventListener("click", () => {
-//     timerStart();
-//     popUp.style.display = "none";
-//     grid.style.pointerEvents = "auto";
-//   });
-// };
 
-// start();
 
 //START GAME FUNCTION
 

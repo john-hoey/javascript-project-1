@@ -16,11 +16,9 @@
   font-weight: normal;
   font-style: normal;
 }
-
 * {
   font-family: "Super-Mario-Bros";
 }
-
 body {
   /* display: flex; */
   background-color: black;
@@ -29,7 +27,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .page-header {
   padding: 5px;
   display: flex;
@@ -38,7 +35,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .header-list {
   padding: 0px;
   display: flex;
@@ -47,14 +43,12 @@ body {
   justify-content: space-around;
   list-style: none;
 }
-
 .list-h1 {
   font-size: x-large;
   padding: 0;
   margin: 0;
   text-align: center;
 }
-
 .reset-button {
   display: flex;
   border-radius: 10px;
@@ -65,7 +59,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .timer {
   display: flex;
   justify-content: center;
@@ -84,7 +77,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .pop-up {
   position: fixed;
   /* display: flex; */
@@ -106,28 +98,23 @@ body {
   /* display: none; */
   font-family: "Super-Mario";
 }
-
 .pop-up-header {
   font-weight: bolder;
   font-size: x-large;
   padding: 0px 0px 5px 0;
   margin: 5px 0px 0px 0px;
 }
-
 .pop-up-text {
   margin-top: 10px;
-
   font-style: italic;
   font-size: large;
   font-family: "Super-Mario";
 }
-
 .start-button {
   margin-top: 10px;
   font-size: large;
   font-family: "Super-Mario";
 }
-
 .grid {
   /* width: 369px; */
   width: 40vh;
@@ -137,14 +124,12 @@ body {
   /* pointer-events: none; */
   /* justify-content: center;  */
 }
-
 /* .front {
   display: none;
   width: 90px;
   height: 90px;
   margin: 5px;
 } */
-
 .card {
   width: 90px;
   height: 90px;
@@ -159,7 +144,6 @@ body {
   background-position: 50% 50%;
   display: flex;
 }
-
 /* .coin-ten {
   width: 10vh;
   height: 10vh;
@@ -184,7 +168,6 @@ body {
   background-position: 50% 50%; */
 /* display: none; */
 /* } */
-
 /* .star {
   width: 10vh;
   height: 10vh;
@@ -197,7 +180,6 @@ body {
   background-position: 50% 50%; */
 /* display: none; */
 /* } */
-
 /* .one-up-chest {
   width: 10vh;
   height: 10vh;
@@ -210,7 +192,6 @@ body {
   background-position: 50% 50%; */
 /* display: none; */
 /* } */
-
 /* .flower {
   width: 10vh;
   height: 10vh;
@@ -223,7 +204,6 @@ body {
   background-position: 50% 50%; */
 /* display: none; */
 /* } */
-
 /* .mushroom {
   width: 10vh;
   height: 10vh;
@@ -236,7 +216,6 @@ body {
   background-position: 50% 50%; */
 /* display: none; */
 /* } */
-
 .black {
   background-color: black;
 }
