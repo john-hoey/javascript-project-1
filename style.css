@@ -1,3 +1,26 @@
+@font-face {
+  font-family: "Super-Mario";
+  src: url("Super-Mario.ttf.woff") format("woff"),
+    url("Super-Mario.ttf.svg#Super-Mario") format("svg"),
+    url("Super-Mario.ttf.eot"),
+    url("Super-Mario.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Super-Mario-Bros";
+  src: url("Super-Mario-Bros.ttf.woff") format("woff"),
+    url("Super-Mario-Bros.ttf.svg#Super-Mario-Bros") format("svg"),
+    url("Super-Mario-Bros.ttf.eot"),
+    url("Super-Mario-Bros.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Super-Mario-Bros";
+}
+
 body {
   /* display: flex; */
   background-color: black;
@@ -81,6 +104,7 @@ body {
   /* align-items: center; */
   z-index: 1;
   /* display: none; */
+  font-family: "Super-Mario";
 }
 
 .pop-up-header {
@@ -95,11 +119,13 @@ body {
 
   font-style: italic;
   font-size: large;
+  font-family: "Super-Mario";
 }
 
 .start-button {
   margin-top: 10px;
   font-size: large;
+  font-family: "Super-Mario";
 }
 
 .grid {
