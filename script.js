@@ -161,6 +161,7 @@ resetButton.addEventListener(`click`, () => {
   flippedCards = [];
   // const popUp = document.querySelector(".pop-up");
   popUp.style.display = "none";
+  popUp2.style.visibility = "hidden";
   // popUp2.style.display = "none";
   // main.youWon.style.display = "none";
   // main.remove(youWon);
