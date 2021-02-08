@@ -84,6 +84,7 @@ grid.addEventListener("click", (e) => {
           // youWon.append(resetButton);
           main.append(youWon);
           console.log("You won, yo!");
+          matches = 0;
           //stop timer
         }
       } else {
@@ -107,11 +108,15 @@ let totalSeconds = 0;
 
 const timerStart = () => {
   const setTime = () => {
+    if (matches === 6) {
+      clearInterval(refreshTimer);
+      console.log("I won");
+    }
     ++totalSeconds;
     secondsLabel.innerHTML = pad(totalSeconds % 60);
     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
   };
-  setInterval(setTime, 1000);
+  let refreshTimer = setInterval(setTime, 1000);
   // if (matches === 6) {
   //   clearInterval(timerStart);
   // }
@@ -157,7 +162,7 @@ resetButton.addEventListener(`click`, () => {
   // popUp2.style.display = "none";
   // main.youWon.style.display = "none";
   // main.remove(youWon);
-
+  // timerStart();
   buildGrid();
 });
 
