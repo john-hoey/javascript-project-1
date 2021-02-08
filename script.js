@@ -114,10 +114,9 @@ const timerStart = () => {
 // // RESET TIMER
 let resetButton = document.querySelector(".reset-button");
 resetButton.addEventListener(`click`, () => {
-  secondsLabel.innerHTML = 0;
-  minutesLabel.innerHTML = 0;
+  secondsLabel.innerText = "00";
+  minutesLabel.innerText = "00";
   totalSeconds = 0;
-
   // let minutesLabel = document.getElementById("minutes");
   // let secondsLabel = document.getElementById("seconds");
   // minutesLabel = 0;
