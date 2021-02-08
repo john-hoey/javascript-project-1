@@ -16,10 +16,9 @@
   font-weight: normal;
   font-style: normal;
 }
-* {
-  font-family: "Super-Mario-Bros";
-}
+
 body {
+  font-family: "Super-Mario-Bros";
   /* display: flex; */
   background-color: black;
   width: 100vw;
@@ -99,6 +98,7 @@ body {
   font-family: "Super-Mario";
 }
 .pop-up-header {
+  font-family: "Super-Mario-Bros";
   font-weight: bolder;
   font-size: x-large;
   padding: 0px 0px 5px 0;
@@ -144,7 +144,7 @@ body {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.flip {
   transform: rotateY(180deg);
 }
 
@@ -177,102 +177,7 @@ body {
   transform: rotateY(180deg);
 }
 
-/* .front {
-  display: none;
-  width: 90px;
-  height: 90px;
-  margin: 5px;
-} */
-/* .card {
-  width: 90px;
-  height: 90px;
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black; */
-/* border: 1px solid white; */
-/* background: url(assets/n-spade.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  display: flex;
-}
-
-.card:hover {
-  transform: rotateY(180deg);
-} */
-/* .coin-ten {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black; */
-/* border: 1px solid white; */
-/* background: url(assets/coin.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
-/* display: none; */
-/* } */
-/* .twenty-coin {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black; */
-/* border: 1px solid white; */
-/* background: url(assets/twenty-coin.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
-/* display: none; */
-/* } */
-/* .star {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black; */
-/* border: 1px solid white; */
-/* background: url(assets/star.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
-/* display: none; */
-/* } */
-/* .one-up-chest {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black; */
-/* border: 1px solid white; */
-/* background: url(assets/one-up-chest.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
-/* display: none; */
-/* } */
-/* .flower {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black; */
-/* border: 1px solid white; */
-/* background: url(assets/flower.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
-/* display: none; */
-/* } */
-/* .mushroom {
-  width: 10vh;
-  height: 10vh;
-  margin-top: 3vh;
-  background-color: black; */
-/* border: 1px solid white; */
-/* background: url(assets/mushroom1.png);
-  background-size: 65% 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
-/* display: none; */
-/* } */
-.black {
-  background-color: black;
+.hide {
+  transition: 1s;
+  opacity: 0;
 }
