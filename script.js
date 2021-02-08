@@ -82,9 +82,8 @@ grid.addEventListener("click", (e) => {
           // playAgain.textContent = "Play Again!";
           // resetButton();
           // youWon.append(resetButton);
-          main.append(youWon);
+          // main.append(youWon);
           console.log("You won, yo!");
-          matches = 0;
           //stop timer
         }
       } else {
@@ -149,7 +148,7 @@ const timerStart = () => {
 //   });
 // };
 
-// // RESET TIMER
+// // RESET TIMERs
 let resetButton = document.querySelector(".reset-button");
 resetButton.addEventListener(`click`, () => {
   secondsLabel.innerText = "00";
@@ -164,6 +163,7 @@ resetButton.addEventListener(`click`, () => {
   // main.remove(youWon);
   // timerStart();
   buildGrid();
+  timerStart();
 });
 
 // PROBABLY OLD SSTUFF (reset)
