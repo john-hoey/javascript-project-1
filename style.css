@@ -139,6 +139,8 @@ body {
 }
 .pop-up-text {
   margin-top: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
   font-style: italic;
   font-size: large;
   font-family: "Super-Mario";
@@ -149,7 +151,7 @@ body {
   font-family: "Super-Mario";
 }
 .grid {
-  width: 290px;
+  width: 277px;
   /* width: 40vh; */
   display: flex;
   flex-wrap: wrap;
@@ -219,7 +221,18 @@ body {
   /* body {
      background-color: lightblue; 
   } */
+  .list-h1,
+  .sound-toggle,
+  .reset-button {
+    font-size: 25px;
+  }
+  .timer {
+    font-size: 30px;
+  }
   .pop-up {
+    width: 500px;
+  }
+  .pop-up-2 {
     width: 500px;
   }
   .grid {
@@ -231,8 +244,13 @@ body {
     width: 85px;
     height: 115px;
   }
+  .pop-up-header {
+    font-size: 30px;
+  }
   .pop-up-text {
     margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-style: italic;
     font-size: 22px;
     font-family: "Super-Mario";
@@ -242,9 +260,21 @@ body {
   /* body {
     background-color: violet; 
   } */
+  .list-h1,
+  .sound-toggle,
+  .reset-button {
+    font-size: 30px;
+  }
+  .timer {
+    font-size: 35px;
+  }
   .pop-up {
     width: 700px;
-    height: 500px;
+    height: 550px;
+  }
+  .pop-up-2 {
+    width: 700px;
+    height: 550px;
   }
   .grid {
     width: 485px;
@@ -253,10 +283,15 @@ body {
   .flip-card {
     margin: 8px;
     width: 105px;
-    height: 135px;
+    height: 140px;
+  }
+  .pop-up-header {
+    font-size: 35px;
   }
   .pop-up-text {
     margin-top: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-style: italic;
     font-size: 25px;
     font-family: "Super-Mario";
