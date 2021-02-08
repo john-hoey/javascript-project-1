@@ -97,6 +97,36 @@ body {
   /* display: none; */
   font-family: "Super-Mario";
 }
+.pop-up-2 {
+  position: fixed;
+  /* display: flex; */
+  border: 2px solid white;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  width: 80%;
+  height: 50%;
+  background-color: rgba(255, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 0;
+  display: none;
+  /* justify-content: center; */
+  /* align-items: center; */
+  z-index: 1;
+  font-family: "Super-Mario";
+}
+
+/* .gif {
+  width: 50%;
+  height: 25%;
+  position: fixed; */
+/* left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%); */
+/* } */
 .pop-up-header {
   font-family: "Super-Mario-Bros";
   font-weight: bolder;
@@ -180,4 +210,20 @@ body {
 .hide {
   transition: 1s;
   opacity: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }

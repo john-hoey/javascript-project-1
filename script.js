@@ -19,6 +19,11 @@ let matches = 0;
 
 // NAME THAT GRID
 const grid = document.querySelector(`.grid`);
+const main = document.querySelector(".page-container");
+let startGame = document.querySelector(".start-button");
+let startGame2 = document.querySelector(".start-button2");
+let popUp = document.querySelector(".pop-up");
+let popUp2 = document.querySelector(".pop-up-2");
 
 // SHUFFLE THOSE CARDS
 const shuffleArray = (array) => {
@@ -72,6 +77,12 @@ grid.addEventListener("click", (e) => {
         flippedCards = [];
         matches++;
         if (matches === 6) {
+          // popUp2.style.display = "visible";
+          // const playAgain = document.createElement("button");
+          // playAgain.textContent = "Play Again!";
+          // resetButton();
+          // youWon.append(resetButton);
+          main.append(youWon);
           console.log("You won, yo!");
           //stop timer
         }
@@ -81,7 +92,7 @@ grid.addEventListener("click", (e) => {
           flippedCards[0].parentNode.classList.remove("flip");
           flippedCards[1].parentNode.classList.remove("flip");
           flippedCards = [];
-        }, 500);
+        }, 800);
       }
     }
   }
@@ -101,6 +112,9 @@ const timerStart = () => {
     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
   };
   setInterval(setTime, 1000);
+  // if (matches === 6) {
+  //   clearInterval(timerStart);
+  // }
   let pad = (val) => {
     let valString = val + "";
     if (valString.length < 2) {
@@ -109,7 +123,26 @@ const timerStart = () => {
       return valString;
     }
   };
+  // if (matches === 6) {
+  //   clearInterval(timerStart);
+  //   interval=0;
+  // }
 };
+
+// RESTART GAME BUTTON
+
+// const restartGame = () => {
+//   let restartButton = document.querySelector(".reset-game");
+//   restartButton.addEventListener(`click`, () => {
+//     secondsLabel.innerText = "00";
+//     minutesLabel.innerText = "00";
+//     totalSeconds = 0;
+//     matches = 0;
+//     flippedCards = [];
+//     const popUp = document.querySelector(".pop-up");
+//     popUp.style.display = "none";
+//   });
+// };
 
 // // RESET TIMER
 let resetButton = document.querySelector(".reset-button");
@@ -119,18 +152,12 @@ resetButton.addEventListener(`click`, () => {
   totalSeconds = 0;
   matches = 0;
   flippedCards = [];
-  // let minutesLabel = document.getElementById("minutes");
-  // let secondsLabel = document.getElementById("seconds");
-  // minutesLabel = 0;
-  // secondsLabel = 0;
-  // seconds = 0;
-  // minutes = 0;
-  // hour = 0;
-  // timer.innerHTML = "0:00";
-  // clearInterval(interval);
-  // popUp.style.display = "none";
-  // cardBox.style.background = assets / n - spade.png;
-  // grid.innerHTML = "";
+  // const popUp = document.querySelector(".pop-up");
+  popUp.style.display = "none";
+  // popUp2.style.display = "none";
+  // main.youWon.style.display = "none";
+  // main.remove(youWon);
+
   buildGrid();
 });
 
@@ -145,14 +172,25 @@ resetButton.addEventListener(`click`, () => {
 
 //START GAME FUNCTION
 
-let startGame = document.querySelector(".start-button");
-let popUp = document.querySelector(".pop-up");
+// let startGame = document.querySelector(".start-button");
+// let popUp = document.querySelector(".pop-up");
 let start = () => {
   startGame.addEventListener("click", () => {
     timerStart();
     popUp.style.display = "none";
+    // popUp2.style.display = "none";
     grid.style.pointerEvents = "auto";
+    // popUp2.style.display = "";
   });
 };
 
+// let start2 = () => {
+//   startGame2.addEventListener("click", () => {
+//     timerStart();
+//     popUp2.style.display = "none";
+//     start2();
+//     grid.style.pointerEvents = "auto";
+//     // popUp2.style.display = "";
+//   });
+// };
 start();
