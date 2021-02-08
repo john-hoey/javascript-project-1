@@ -148,7 +148,7 @@ const timerStart = () => {
 //   });
 // };
 
-// // RESET TIMER
+// // RESET TIMERs
 let resetButton = document.querySelector(".reset-button");
 resetButton.addEventListener(`click`, () => {
   secondsLabel.innerText = "00";
