@@ -41,6 +41,7 @@ const buildGrid = () => {
     let frontCard = document.createElement("div");
     frontCard.classList.add("flip-card-front");
     frontCard.style.backgroundImage = `url(assets/n-spade.png)`;
+    frontCard.setAttribute("data-match", item.name);
     let backCard = document.createElement("div");
     backCard.classList.add("flip-card-back");
     backCard.style.backgroundImage = `url(${item.img})`;
@@ -54,7 +55,38 @@ buildGrid();
 // FLIP YOUR CARDS
 //bubble with delegation
 //if and only if I click on the card and itss face down and my flipped array is less than the array.length 2 then it will add card to array. it wont otherwise
-grid.addEventListener("click", () => {});
+grid.addEventListener("click", (e) => {
+  if (e.target.classList.contains("flip-card-front")) {
+    if (flippedCards.length === 0) {
+      flippedCards.push(e.target);
+      e.target.parentNode.classList.add("flip");
+    } else if (flippedCards.length === 1) {
+      flippedCards.push(e.target);
+      e.target.parentNode.classList.add("flip");
+      let firstCard = flippedCards[0].getAttribute("data-match");
+      let secondCard = flippedCards[1].getAttribute("data-match");
+      if (firstCard === secondCard) {
+        console.log("MATCH!!! YO");
+        flippedCards[0].parentNode.parentNode.classList.add("hide");
+        flippedCards[1].parentNode.parentNode.classList.add("hide");
+        flippedCards = [];
+        matches++;
+        if (matches === 6) {
+          console.log("You won, yo!");
+          //stop timer
+        }
+      } else {
+        console.log("NO MATCH YYO");
+        setTimeout(() => {
+          flippedCards[0].parentNode.classList.remove("flip");
+          flippedCards[1].parentNode.classList.remove("flip");
+          flippedCards = [];
+        }, 500);
+      }
+    }
+  }
+});
+
 //TIMER FUNCTION
 let timer = document.querySelector(".timer");
 
