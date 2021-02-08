@@ -149,8 +149,8 @@ body {
   font-family: "Super-Mario";
 }
 .grid {
-  /* width: 369px; */
-  width: 40vh;
+  width: 290px;
+  /* width: 40vh; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -163,7 +163,7 @@ body {
   background-color: transparent;
   width: 65px;
   height: 90px;
-
+  margin: 2px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 /* This container is needed to position the front and back side */
@@ -216,17 +216,49 @@ body {
 }
 
 @media only screen and (min-width: 600px) {
+  /* body {
+     background-color: lightblue; 
+  } */
+  .pop-up {
+    width: 500px;
+  }
   .grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 380px;
+    /* justify-content: space-between; */
+  }
+  .flip-card {
+    margin: 5px;
+    width: 85px;
+    height: 115px;
+  }
+  .pop-up-text {
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 22px;
+    font-family: "Super-Mario";
   }
 }
-
 @media only screen and (min-width: 768px) {
+  /* body {
+    background-color: violet; 
+  } */
+  .pop-up {
+    width: 700px;
+    height: 500px;
+  }
   .grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 485px;
+    /* justify-content: space-between; */
+  }
+  .flip-card {
+    margin: 8px;
+    width: 105px;
+    height: 135px;
+  }
+  .pop-up-text {
+    margin-top: 35px;
+    font-style: italic;
+    font-size: 25px;
+    font-family: "Super-Mario";
   }
 }
