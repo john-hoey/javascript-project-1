@@ -194,3 +194,12 @@ let start = () => {
 //   });
 // };
 start();
+let togglePlay = () => {
+  var myAudio = document.getElementById("myAudio");
+  if (myAudio.paused) {
+    myAudio.play();
+  } else {
+    myAudio.pause();
+    myAudio.currentTime = 0;
+  }
+};
