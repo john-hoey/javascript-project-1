@@ -84,7 +84,10 @@ grid.addEventListener("click", (e) => {
           // youWon.append(resetButton);
           // main.append(youWon);
           console.log("You won, yo!");
+          popUp2.style.visibility = "visible";
           //stop timer
+          // } else {
+          //   popUp2.style.display = "none";
         }
       } else {
         console.log("NO MATCH YYO");
